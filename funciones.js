@@ -1,3 +1,5 @@
+"use strict";
+const prompt = require("prompt-sync")();
 
 //**Iteración #1: Buscar el máximo**
 
@@ -71,3 +73,21 @@ function averageWord(array) {
   }
   
   averageWord(mixedElements);
+
+  //Iteración #6: Valores únicos
+  //Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados. Puedes usar este array para probar tu función:
+
+  const duplicates = [
+  'sushi','pizza', 'burger','potatoe','pasta','ice-cream', 'pizza','chicken','onion rings','pasta','soda'
+  ];
+  function removeDuplicates(array) {
+      let unique = [];
+      for (let i = 0; i < array.length; i++) {
+        if (!unique.includes(array[i])) {
+          unique.push(array[i]);
+        }
+      }
+      return console.log(unique);
+    }
+    
+    removeDuplicates(duplicates);
